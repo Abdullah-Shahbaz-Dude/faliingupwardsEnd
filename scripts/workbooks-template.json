@@ -1,0 +1,968 @@
+{
+  "workbooks": [
+    {
+      "title": "Active Listening Skills (Communication)",
+      "description": "ADHD can impact listening in conversations due to impulsivity, distraction, or anxiety. This worksheet helps you reflect on how you listen and what makes it harder or easier to stay present.",
+      "questions": [
+        {
+          "question": "Think of a recent conversation where you were trying to listen. What helped you stay focused?",
+          "answer": ""
+        },
+        {
+          "question": "Were there moments when your attention drifted why do you think that happened?",
+          "answer": ""
+        },
+        {
+          "question": "Did you interrupt or zone out? What did you notice about your behaviour?",
+          "answer": ""
+        },
+        {
+          "question": "Were you more focused on what you wanted to say than what the other person was saying?",
+          "answer": ""
+        },
+        {
+          "question": "Did you seek reassurance during the conversation (e.g., 'Am I making sense?')?",
+          "answer": ""
+        } ,{
+          "question": "How did the other person respond overall — did they feel heard?",
+          "answer": ""
+        }
+        ,{
+          "question": "What one skill or mindset would you like to practise in future conversations?",
+          "answer": ""
+        }
+      ]
+    },
+    {
+      "title": "ADHD and Communication Styles",
+      "description": "ADHD can influence how we communicate through impulsivity, rapid speech, tangents, or emotional intensity. This worksheet helps you reflect on how your communication style is shaped by ADHD.",
+      "questions": [
+        {
+          "question": "Describe a recent conversation where you felt misunderstood or overwhelmed.",
+          "answer": ""
+        },
+        {
+          "question": "What did you notice about your speaking  volume, speed, emotion, or focus?",
+          "answer": ""
+        },
+        {
+          "question": "Were you able to get your point across the way you intended?",
+          "answer": ""
+        },
+        {
+          "question": "Did you interrupt, over-explain, or zone out at any point?",
+          "answer": ""
+        },
+        {
+          "question": "How do others typically respond to your communication style?",
+          "answer": ""
+        },
+        {
+          "question": "What feedback (if any) have you received in the past about how you express yourself?",
+          "answer": ""
+        },
+        {
+          "question": "Would you like to explore communication strategies that support clarity and connection?",
+          "answer": ""
+        }
+      ]
+    },
+    {
+      "title": "ADHD and Shame",
+      "description": "Living with undiagnosed or unsupported ADHD can create years of internalised shame. This worksheet is a chance to explore that shame safely without fixing, just noticing.",
+      "questions": [
+        {
+          "question": "Describe a recent situation that triggered feelings of shame about how you handled something.",
+          "answer": ""
+        },
+        {
+          "question": "What did your inner voice say to you in that moment?",
+          "answer": ""
+        },
+        {
+          "question": "Where do you think those messages came from (past experiences, people, culture)?",
+          "answer": ""
+        },
+        {
+          "question": "Did the shame cause you to hide, apologise, overwork, or shut down?",
+          "answer": ""
+        },
+        {
+          "question": "What would you say to a friend in the same situation?",
+          "answer": ""
+        }
+        ,
+        {
+          "question": "What helps soften the shame when it shows up?",
+          "answer": ""
+        },
+        {
+          "question": "Would you like to explore how to reframe these stories in future sessions?",
+          "answer": ""
+        }
+      ]
+    },
+    {
+      "title": "Breaking Down Admin Overload",
+      "description": "Admin tasks often feel overwhelming when you live with ADHD. They may pile up or feel mentally exhausting. This sheet is to help you observe where the stress is coming from.",
+      "questions": [
+        {
+          "question": "What admin tasks have been sitting on your to-do list lately?",
+          "answer": ""
+        },
+        {
+          "question": "Which ones feel most emotionally difficult to face and why?",
+          "answer": ""
+        },
+        {
+          "question": "Did you take on any admin for others this week that added to your stress?",
+          "answer": ""
+        },
+        {
+          "question": "How do you tend to feel before, during, and after tackling admin tasks?",
+          "answer": ""
+        },
+        {
+          "question": "Is there one admin task you’d like to approach differently next week?",
+          "answer": ""
+        },
+        {
+          "question": "Would you like support creating an admin strategy in session?",
+          "answer": ""
+        }
+      ]
+    },
+    {
+      "title": "Creating Family Routines (Parenting)",
+      "description": "Routines help both adults and children with ADHD feel more grounded and less overwhelmed. This worksheet invites you to reflect on how routines are working (or not working) in your family life.",
+      "questions": [
+        {
+          "question": "Describe your current morning and evening routines during the week.",
+          "answer": ""
+        },
+        {
+          "question": "Do these routines feel rushed, chaotic, calm, or predictable?",
+          "answer": ""
+        },
+        {
+          "question": "Which part of the day is hardest to manage and why?",
+          "answer": ""
+        },
+        {
+          "question": "Have you tried introducing routines or structure in the past? What happened?",
+          "answer": ""
+        },
+        {
+          "question": "Are there any points in the day where people-pleasing disrupts the plan?",
+          "answer": ""
+        },
+        {
+          "question": "What kind of routine would feel realistic and supportive for you and your family?",
+          "answer": ""
+        },
+        {
+          "question": "What would you like to talk through in session to help build better routines?",
+          "answer": ""
+        }
+      ]
+    },
+    {
+      "title": "Decision-Making and Overwhelm",
+      "description": "Decision paralysis is a common ADHD experience, especially when emotions or overthinking are involved. This sheet helps you explore how you respond to choices and what support might help.",
+      "questions": [
+        {
+          "question": "Describe a decision (big or small) that felt overwhelming this week.",
+          "answer": ""
+        },
+        {
+          "question": "What made it feel difficult  too many options, fear of getting it wrong, time pressure?",
+          "answer": ""
+        },
+        {
+          "question": "How long did you sit with the indecision, and how did it affect you?",
+          "answer": ""
+        },
+        {
+          "question": "What helped you finally decide or is it still unresolved?",
+          "answer": ""
+        },
+        {
+          "question": "Have you noticed a pattern in how you respond to choices?",
+          "answer": ""
+        },
+        {
+          "question": "What would help simplify decision-making in your life right now?",
+          "answer": ""
+        },
+        {
+          "question": "Would you like us to work through a decision process together in session?",
+          "answer": ""
+        }
+      ]
+    },
+    {
+      "title": "Digital Overload and Focus",
+      "description": "Constant digital input can fragment attention and increase ADHD symptoms. This sheet helps you reflect on how technology is affecting your focus and mood.",
+      "questions": [
+        {
+          "question": "Describe a day when you felt digitally overloaded what was happening?",
+          "answer": ""
+        },
+        {
+          "question": "How many devices or tabs were active during your work or downtime?",
+          "answer": ""
+        },
+        {
+          "question": "When you pick up your phone, what are you usually hoping to find (e.g., escape, connection, dopamine)?",
+          "answer": ""
+        },
+        {
+          "question": "Do certain apps or platforms trigger stress, hyperfocus, or distraction?",
+          "answer": ""
+        },
+        {
+          "question": "What do you notice about your attention or anxiety after long digital sessions?",
+          "answer": ""
+        },
+        {
+          "question": "Have you ever tried boundaries with tech? What worked or didn’t?",
+          "answer": ""
+        },
+        {
+          "question": "What would help you create more focus-friendly digital habits?",
+          "answer": ""
+        }
+      ]
+    },
+    {
+      "title": "Distraction Management at Work",
+      "description": "Distractions are a common challenge, especially in busy or unpredictable environments. This worksheet helps you reflect on when and why distractions happen, so we can discuss patterns and supports in session.",
+      "questions": [
+        {
+          "question": "Think about a recent time when you were distracted at work what was happening around you?",
+          "answer": ""
+        },
+        {
+          "question": "What kind of task were you working on and how were you feeling (e.g., bored, overwhelmed, restless)?",
+          "answer": ""
+        },
+        {
+          "question": "What distracted you and how long did it pull you off course?",
+          "answer": ""
+        },
+        {
+          "question": "Did the distraction come from outside (e.g., notifications) or inside (e.g., your thoughts)?",
+          "answer": ""
+        },
+        {
+          "question": "What impact did it have on your focus, confidence, or task completion?",
+          "answer": ""
+        },
+        {
+          "question": "Have you noticed any common patterns in when or where distractions happen?",
+          "answer": ""
+        },
+        {
+          "question": "What do you think might help reduce distractions in the future?",
+          "answer": ""
+        }
+      ]
+    },
+    {
+      "title": "Emotional Regulation and Triggers",
+      "description": "ADHD can make emotions feel fast and intense. Sometimes a small thing can trigger a big response. This worksheet helps you slow down and reflect on what happened and why.",
+      "questions": [
+        {
+          "question": "Describe a moment this week when your emotional reaction felt out of proportion.",
+          "answer": ""
+        },
+        {
+          "question": "What triggered it, and what was going on before it happened?",
+          "answer": ""
+        },
+        {
+          "question": "How did you react in your body, behaviour, and thoughts?",
+          "answer": ""
+        },
+        {
+          "question": "What helped (or didn’t help) you calm down afterwards?",
+          "answer": ""
+        },
+        {
+          "question": "How long did it take to return to baseline?",
+          "answer": ""
+        },
+        {
+          "question": "Is this a trigger you've seen before in your life?",
+          "answer": ""
+        },
+        {
+          "question": "What would support you in staying regulated when this happens again?",
+          "answer": ""
+        }
+      ]
+    },
+    {
+      "title": "Managing Validation-Seeking at Work",
+      "description": "Validation-seeking is a common, especially in work settings where feedback can feel uncertain or inconsistent. This worksheet helps you become more aware of your need for reassurance and how it influences your day.",
+      "questions": [
+        {
+          "question": "Think of a time at work this week when you asked for reassurance (e.g., 'Is this okay?').",
+          "answer": ""
+        },
+        {
+          "question": "What was happening at the time? What were you unsure about?",
+          "answer": ""
+        },
+        {
+          "question": "HHow did the other person respond, and how did you feel afterwards?",
+          "answer": ""
+        },
+        {
+          "question": "What were you hoping their reassurance would give you?",
+          "answer": ""
+        },
+        {
+          "question": "Is this a regular pattern for you in certain environments or with certain people?",
+          "answer": ""
+        },
+        {
+          "question": "What would it feel like to self-validate in this situation?",
+          "answer": ""
+        },
+        {
+          "question": "Would you like help building confidence in this area during our sessions?",
+          "answer": ""
+        }
+      ]
+    },
+    {
+      "title": "Managing Validation-Seeking in Relationships",
+      "description": "It’s normal to want reassurance in close relationships, especially when you're feeling vulnerable. But when validation-seeking becomes constant, it can cause strain or self-doubt. This worksheet helps you reflect on those moments and understand what you truly need.",
+      "questions": [
+        {
+          "question": "Recall a recent moment when you asked your partner or friend for reassurance.",
+          "answer": ""
+        },
+        {
+          "question": "What were you feeling in that moment? What were you hoping to hear?",
+          "answer": ""
+        },
+        {
+          "question": "How did the other person respond, and how did you feel afterwards?",
+          "answer": ""
+        },
+        {
+          "question": "What do you think the deeper need was underneath the reassurance-seeking?",
+          "answer": ""
+        },
+        {
+          "question": "Are there certain situations or people that trigger this pattern more often?",
+          "answer": ""
+        },
+        {
+          "question": "What would it feel like to offer that reassurance to yourself instead?",
+          "answer": ""
+        },
+        {
+          "question": "Is this something you'd like to explore further in session?",
+          "answer": ""
+        }
+      ]
+    },
+    {
+      "title": "Motivation and Reward Systems",
+      "description": "Motivation can fluctuate rapidly in ADHD, especially for tasks that are boring, effortful, or unclear. This worksheet helps you notice what energises or shuts down your drive.",
+      "questions": [
+        {
+          "question": "Describe a task you were able to stay motivated on recently  what helped?.",
+          "answer": ""
+        },
+        {
+          "question": "Now think of one where motivation disappeared what changed?",
+          "answer": ""
+        },
+        {
+          "question": "Were there rewards, pressure, structure, or meaning attached?",
+          "answer": ""
+        },
+        {
+          "question": "Do you respond better to external accountability or internal satisfaction?",
+          "answer": ""
+        },
+        {
+          "question": "What has worked in the past to get you going (e.g., timers, music, deadlines)?",
+          "answer": ""
+        },
+        {
+          "question": "How do you feel about using rewards to get through challenging tasks?",
+          "answer": ""
+        },
+        {
+          "question": "Would you like to design a personal reward system together in session?",
+          "answer": ""
+        }
+      ]
+    },
+    {
+      "title": "Understanding People Pleasing ",
+      "Psychoeducation": "People-pleasing often stems from Rejection Sensitivity Dysphoria (RSD), a common ADHD trait where perceived rejection feels intense. This can lead individuals to say 'yes' to avoid conflict or disapproval, even at the cost of their own needs or priorities.",
+      "questions": [
+        {
+          "question": "Situation 1: What did you agree to? Why?",
+          "answer": ""
+        },
+        {
+          "question": "How did it feel? What alternative response could you have used?",
+          "answer": ""
+        },
+        {
+          "question": "Situation 2: What did you agree to? Why?",
+          "answer": ""
+        },
+        {
+          "question": "How did it feel? What alternative response could you have used?",
+          "answer": ""
+        },
+        {
+          "question": "Situation 3: What did you agree to? Why?",
+          "answer": ""
+        },
+        {
+          "question": "How did it feel? What alternative response could you have used?",
+          "answer": ""
+        },
+        {
+          "question": "How does people-pleasing impact your energy or priorities?",
+          "answer": ""
+        },
+        {
+          "question": "What would change if you made decisions more in line with your own needs or values?",
+          "answer": ""
+        }
+      ]
+    },
+    {
+      "title": "People-Pleasing and Admin Tasks",
+      "description": "Sometimes people-pleasing shows up as taking on admin for others, even when you’re overwhelmed. This worksheet helps you reflect on how this plays out and how it impacts your ability to prioritise your own tasks.",
+      "questions": [
+        {
+          "question": "Think of a task you took on recently that wasn’t really yours to do.",
+          "answer": ""
+        },
+        {
+          "question": "What made you agree to it or take it on?",
+          "answer": ""
+        },
+        {
+          "question": "How did you feel before, during, and after doing it?",
+          "answer": ""
+        },
+        {
+          "question": "Did this task interfere with something important to you?",
+          "answer": ""
+        },
+        {
+          "question": "Was it hard to say 'no' and if so, why?",
+          "answer": ""
+        },
+        {
+          "question": "What do you wish you could have said or done instead?",
+          "answer": ""
+        },
+        {
+          "question": "Would you like to work on setting admin boundaries in our sessions?",
+          "answer": ""
+        }
+      ]
+    },
+    {
+      "title": "People-Pleasing in Communication",
+      "description": "In conversation, people-pleasing can show up as over-apologising, hiding your views, or trying to manage others’ emotions. This reflection will help you recognise your communication habits and the emotional drivers behind them.",
+      "questions": [
+        {
+          "question": "Think about a recent conversation where you felt you were 'people-pleasing'.",
+          "answer": ""
+        },
+        {
+          "question": "What did you say (or not say) in that moment?",
+          "answer": ""
+        },
+        {
+          "question": "What were you worried might happen if you spoke more openly or directly?",
+          "answer": ""
+        },
+        {
+          "question": "How did you feel during and after the conversation?",
+          "answer": ""
+        },
+        {
+          "question": "Is this a pattern you notice in particular environments or with certain people?",
+          "answer": ""
+        },
+        {
+          "question": "What would feel safer or more authentic for you in those moments?",
+          "answer": ""
+        },
+        {
+          "question": "How can I support you with communication boundaries in our sessions?",
+          "answer": ""
+        }
+      ]
+    },
+    {
+      "title": "People-Pleasing in Parenting",
+      "description": "As a parent, it can be hard to separate your child’s needs from your own. People-pleasing may show up as overcommitting, avoiding saying 'no', or carrying guilt. This sheet is for reflecting on how this shows up in your parenting, without judgment.",
+      "questions": [
+        {
+          "question": "Describe a time this week when you gave in to your child’s request despite feeling tired or overwhelmed.",
+          "answer": ""
+        },
+        {
+          "question": "What were you feeling in the moment? What did you hope to avoid or achieve?",
+          "answer": ""
+        },
+        {
+          "question": "How did the interaction impact your energy or mood later?",
+          "answer": ""
+        },
+        {
+          "question": "Do you notice this happening often? With all your children or just one in particular?",
+          "answer": ""
+        },
+        {
+          "question": "What does saying 'no' bring up for you as a parent?",
+          "answer": ""
+        },
+        {
+          "question": "What needs of your own might have been neglected in this situation?",
+          "answer": ""
+        },
+        {
+          "question": "Would you like help creating boundaries in parenting during our sessions?",
+          "answer": ""
+        }
+      ]
+    },
+    {
+      "title": "Perfectionism and Productivity",
+      "description": "Perfectionism can stop people from starting, finishing, or enjoying their work. This sheet helps you reflect on when 'good enough' feels impossible, and what’s going on underneath.",
+      "questions": [
+        {
+          "question": "Describe a recent task where you found yourself aiming for perfection.",
+          "answer": ""
+        },
+        {
+          "question": "What were you worried might happen if it wasn’t done perfectly?",
+          "answer": ""
+        },
+        {
+          "question": "Did this pressure slow you down or stop you from finishing?",
+          "answer": ""
+        },
+        {
+          "question": "How did you feel while doing the task, and afterwards?",
+          "answer": ""
+        },
+        {
+          "question": "Has perfectionism affected other areas of your life or relationships?",
+          "answer": ""
+        },
+        {
+          "question": "Where do you think these high standards come from?",
+          "answer": ""
+        },
+        {
+          "question": "Would you like to experiment with 'good enough' in a safe space together?",
+          "answer": ""
+        }
+        
+      ]
+    },
+    {
+      "title": "Reducing People-Pleasing in Relationships",
+      "description": "In personal relationships, people-pleasing can lead to resentment, burnout, or disconnection. This worksheet allows you to reflect on where you might be abandoning your needs in order to keep the peace or feel accepted.",
+      "questions": [
+        {
+          "question": "Describe a recent interaction where you went along with something to avoid conflict.",
+          "answer": ""
+        },
+        {
+          "question": "What did you do or agree to, and why?",
+          "answer": ""
+        },
+        {
+          "question": "How did you feel afterwards?",
+          "answer": ""
+        },
+        {
+          "question": "What might you have said or done differently if you’d felt safer to express your truth?",
+          "answer": ""
+        },
+        {
+          "question": "Do you feel able to express disagreement or boundaries in this relationship? Why or why not?",
+          "answer": ""
+        },
+        {
+          "question": "How do you think people-pleasing affects the closeness or balance in this relationship?",
+          "answer": ""
+        },
+        {
+          "question": "Would you like to explore how to assert yourself more safely in future sessions?",
+          "answer": ""
+        }
+        
+      ]
+    },
+    {
+      "title": "Routine Building and Habit Stacking",
+      "description": "Creating routines and linking new habits to existing ones can help reduce executive function strain in ADHD. This worksheet helps you reflect on your current habits and where you'd like more consistency or ease.",
+      "questions": [
+        {
+          "question": "What is one part of your day that feels the most chaotic or unstructured?",
+          "answer": ""
+        },
+        {
+          "question": "Have you tried creating routines in this area before? What worked or didn’t?",
+          "answer": ""
+        },
+        {
+          "question": "Think of a habit you’d like to build what keeps getting in the way?",
+          "answer": ""
+        },
+        {
+          "question": "What existing routine could you link this habit to?",
+          "answer": ""
+        },
+        {
+          "question": "How would it feel to have more structure in this area of your life?",
+          "answer": ""
+        },
+        {
+          "question": "What has helped you stick with routines in the past (even short-term)?",
+          "answer": ""
+        },
+        {
+          "question": "Would you like help designing a routine or habit stack together in session?",
+          "answer": ""
+        }
+        
+      ]
+    },
+    {
+      "title": "Sensory Sensitivities and ADHD",
+      "description": "Many people with ADHD experience heightened sensitivity to sound, light, touch, or other stimuli. This sheet invites you to explore what overwhelms your senses and what calms them.",
+      "questions": [
+        {
+          "question": "Think of a recent situation where your senses felt overwhelmed  what triggered it?",
+          "answer": ""
+        },
+        {
+          "question": "What was the environment like (e.g., noise, light, crowd, temperature)?",
+          "answer": ""
+        },
+        {
+          "question": "How did your body and mood respond?",
+          "answer": ""
+        },
+        {
+          "question": "Were you able to self-soothe or escape the situation?",
+          "answer": ""
+        },
+        {
+          "question": "What kinds of environments make you feel regulated and safe?",
+          "answer": ""
+        },
+        {
+          "question": "Do your sensory needs change depending on energy levels or emotional state?",
+          "answer": ""
+        },
+        {
+          "question": "Would you like to create a sensory toolkit together in session?",
+          "answer": ""
+        }
+        
+      ]
+    },
+    {
+      "title": "Setting Boundaries at Work",
+      "description": "Many people struggle to set boundaries at work due to people pleasing, fear of conflict, or. This sheet is not about fixing the behaviour, but becoming more aware of your experiences and patterns.",
+      "questions": [
+        {
+          "question": "Can you recall a time recently when you struggled to say 'no' at work?",
+          "answer": ""
+        },
+        {
+          "question": "What did you agree to do, and how did it affect your workload or focus?",
+          "answer": ""
+        },
+        {
+          "question": "What thoughts or fears came up when you considered saying 'no'?",
+          "answer": ""
+        },
+        {
+          "question": "How did you feel after the situation passed (e.g., relief, resentment, regret)?",
+          "answer": ""
+        },
+        {
+          "question": "Have you noticed any repeated patterns with specific colleagues or tasks?",
+          "answer": ""
+        },
+        {
+          "question": "What would it feel like to set a small boundary next time?",
+          "answer": ""
+        },
+        {
+          "question": "Anything here you’d like support with in our session?",
+          "answer": ""
+        }
+        
+      ]
+    },
+    {
+      "title": "Sleep Hygiene for ADHD",
+      "description": "Sleep challenges are extremely common in ADHD. Racing thoughts, late nights, or irregular routines can all contribute. This worksheet helps you reflect on your current sleep habits and what's affecting them.",
+      "questions": [
+        {
+          "question": "Describe your usual sleep and wake routine during the week.",
+          "answer": ""
+        },
+        {
+          "question": "What makes it hard for you to fall asleep or stay asleep?",
+          "answer": ""
+        },
+        {
+          "question": "What do you notice about your thoughts, body, or environment at bedtime?",
+          "answer": ""
+        },
+        {
+          "question": "How do screens, food, or activity affect your sleep patterns?",
+          "answer": ""
+        },
+        {
+          "question": "Have you found anything that helps even a little?",
+          "answer": ""
+        },
+        {
+          "question": "What happens the next day when your sleep is poor?",
+          "answer": ""
+        },
+        {
+          "question": "What would you like to talk through or troubleshoot in our session?",
+          "answer": ""
+        }
+        
+      ]
+    },
+    {
+      "title": "Task Initiation and Procrastination",
+      "description": "Getting started on tasks can feel like the hardest step for people with ADHD. This sheet helps you reflect on what gets in the way emotionally, mentally, or practically.",
+      "questions": [
+        {
+          "question": "What is one task you avoided this week even though it mattered to you?",
+          "answer": ""
+        },
+        {
+          "question": "What do you think was stopping you from starting?",
+          "answer": ""
+        },
+        {
+          "question": "What thoughts or feelings came up each time you considered starting?",
+          "answer": ""
+        },
+        {
+          "question": "Have you noticed this pattern in other areas of life?",
+          "answer": ""
+        },
+        {
+          "question": "What finally helped you act or are you still stuck?",
+          "answer": ""
+        },
+        {
+          "question": "What tends to make task initiation easier for you (e.g., music, accountability)?",
+          "answer": ""
+        },
+        {
+          "question": "Would you like to explore a different strategy for starting tasks in our sessions?",
+          "answer": ""
+        }
+        
+      ]
+    },
+    {
+      "title": "Time Blindness and Planning",
+      "description": "Time blindness is a common trait in ADHD losing track of time, underestimating tasks, or struggling to plan. This worksheet helps you explore how time shows up in your week and what you’re learning about your own patterns.",
+      "questions": [
+        {
+          "question": "Describe one situation this week where you lost track of time.",
+          "answer": ""
+        },
+        {
+          "question": "What were you doing and what was the outcome (e.g., running late, missing a task)?",
+          "answer": ""
+        },
+        {
+          "question": "How did it make you feel at the time and afterward?",
+          "answer": ""
+        },
+        {
+          "question": "What tools or reminders have you tried (or avoided)?",
+          "answer": ""
+        },
+        {
+          "question": "What types of tasks are most affected by time blindness for you?",
+          "answer": ""
+        },
+        {
+          "question": "Is time pressure something that motivates or stresses you?",
+          "answer": ""
+        },
+        {
+          "question": "What would you like to explore in session around time awareness or planning?",
+          "answer": ""
+        }
+        
+      ]
+    },
+    {
+      "title": "Understanding RSD in Relationships",
+      "description": "Rejection Sensitivity Dysphoria (RSD) causes intense emotional pain in response to perceived rejection or criticism. This worksheet helps you explore when this has come up recently and what you noticed about your reactions.",
+      "questions": [
+        {
+          "question": "Think of a recent moment where you felt rejected, criticised, or left out what happened?",
+          "answer": ""
+        },
+        {
+          "question": "How did your body react in the moment (e.g., heart rate, tension)?",
+          "answer": ""
+        },
+        {
+          "question": "What thoughts came up about yourself or the other person?",
+          "answer": ""
+        },
+        {
+          "question": "What did you do next (e.g., shut down, people-please, lash out)?",
+          "answer": ""
+        },
+        {
+          "question": "How long did it take to recover and how did it affect your day or relationship?",
+          "answer": ""
+        },
+        {
+          "question": "Have you noticed RSD showing up in certain relationships more than others?",
+          "answer": ""
+        },
+        {
+          "question": "What kind of support would help you regulate those feelings in future?",
+          "answer": ""
+        }
+        
+      ]
+    },
+    {
+      "title": "Validation-Seeking in Communication",
+      "description": "ADHD can lead to self-doubt during conversations, causing frequent checking like 'Did that make sense?' or 'Are you okay with that?'. This worksheet helps you observe when and why that happens, and reflect on what you might need instead.",
+      "questions": [
+        {
+          "question": "Describe a recent time you sought validation mid-conversation.",
+          "answer": ""
+        },
+        {
+          "question": "What did you ask or say? What were you hoping to confirm?",
+          "answer": ""
+        },
+        {
+          "question": "How did it affect the flow of the conversation?",
+          "answer": ""
+        },
+        {
+          "question": "Did you feel more or less confident afterwards?",
+          "answer": ""
+        },
+        {
+          "question": "Where do you think the need for reassurance came from in that moment?",
+          "answer": ""
+        },
+        {
+          "question": "What would it feel like to sit with uncertainty instead of checking?",
+          "answer": ""
+        },
+        {
+          "question": "Is this an area you'd like support with in future sessions?",
+          "answer": ""
+        }
+        
+      ]
+    },
+    {
+      "title": "Validation-Seeking in Parenting",
+      "description": "Parents sometimes can look to their children for constant reassurance. This can come from a place of insecurity, perfectionism, or fear of getting things wrong. This worksheet is a chance to explore those feelings with compassion.",
+      "questions": [
+        {
+          "question": "Think of a time this week when you sought reassurance about your parenting (e.g., from a partner, child, or friend).",
+          "answer": ""
+        },
+        {
+          "question": "What were you hoping they would say or do?",
+          "answer": ""
+        },
+        {
+          "question": "How did you feel before and after receiving (or not receiving) that validation?",
+          "answer": ""
+        },
+        {
+          "question": "Do you feel more confident in your parenting at certain times than others?",
+          "answer": ""
+        },
+        {
+          "question": "Are there areas of parenting where you most doubt yourself?",
+          "answer": ""
+        },
+        {
+          "question": "What would it mean to you to feel like a 'good enough' parent?",
+          "answer": ""
+        },
+        {
+          "question": "What support would help you feel more confident?",
+          "answer": ""
+        }
+        
+      ]
+    },
+    {
+      "title": "Working Memory Strategies",
+      "description": "Working memory challenges can make it hard to hold steps in mind, remember plans, or finish what you started. This worksheet helps you reflect on your memory patterns and where you might need more external support.",
+      "questions": [
+        {
+          "question": "Think of a time this week when you forgot something important  what happened?",
+          "answer": ""
+        },
+        {
+          "question": "What were you trying to remember or juggle at the time?",
+          "answer": ""
+        },
+        {
+          "question": "How did it affect your day or confidence?",
+          "answer": ""
+        },
+        {
+          "question": "Do you tend to lose track of steps, forget tasks, or lose items?",
+          "answer": ""
+        },
+        {
+          "question": "What tools (e.g., notes, reminders) have helped in the past?",
+          "answer": ""
+        },
+        {
+          "question": "Where does memory breakdown happen most work, home, relationships?",
+          "answer": ""
+        },
+        {
+          "question": "Would you like help building a working memory support system?",
+          "answer": ""
+        }
+        
+      ]
+    }
+  ]
+}

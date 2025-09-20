@@ -1,0 +1,12 @@
+@keyframes zoom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.25);
+  }
+}
+.animate-zoom {
+  animation: zoom 6s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+  will-change: transform;
+}

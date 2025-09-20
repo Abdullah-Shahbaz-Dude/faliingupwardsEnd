@@ -1,0 +1,25 @@
+[
+  [
+    { "name": "Organization 1", "src": "/images/logos/OIP.png" },
+    { "name": "Organization 2", "src": "/images/logos/OIP-2.png" },
+    { "name": "Organization 3", "src": "/images/logos/OIP-3.png" },
+    { "name": "Organization 5", "src": "/images/logos/OIP-5.png" },
+    { "name": "Organization 6", "src": "/images/logos/OIP-6.png" }
+  ],
+  [
+    { "name": "Organization 7", "src": "/images/logos/OIP-7.png" },
+    { "name": "Organization 8", "src": "/images/logos/OIP-8.png" },
+    { "name": "Organization 9", "src": "/images/logos/OIP-9.png" },
+    { "name": "Organization 10", "src": "/images/logos/download.png" },
+    { "name": "Organization 11", "src": "/images/logos/download-1.png" }
+  ],
+  [
+    { "name": "Organization 12", "src": "/images/logos/download-1-1.png" },
+    { "name": "Organization 13", "src": "/images/logos/download-11.png" },
+    {
+      "name": "Organization 14",
+      "src": "/images/logos/thumbnail_image001.png"
+    },
+    { "name": "Organization 15", "src": "/images/logos/thumbnail_image002.png" }
+  ]
+]
