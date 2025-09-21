@@ -6,7 +6,7 @@ import connectMongo from "@/lib/mongoose";
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
     // Verify admin access using NextAuth
@@ -18,7 +18,7 @@ export async function GET(
       );
     }
 
-    const workbookId = params.id;
+    const { id: workbookId } = await params;
 
     // Validate workbook ID
     if (!workbookId || workbookId === "null" || workbookId === "undefined") {

@@ -67,8 +67,13 @@ class MemoryStore {
 // 🏪 Global store instance
 const store = new MemoryStore();
 
-// 🧹 Cleanup expired entries every 5 minutes
-setInterval(() => store.cleanup(), 5 * 60 * 1000);
+// 🧹 Cleanup expired entries every 5 minutes (with proper cleanup handling)
+const cleanupInterval = setInterval(() => store.cleanup(), 5 * 60 * 1000);
+
+// Export cleanup function for graceful shutdown
+export function stopRateLimiterCleanup() {
+  clearInterval(cleanupInterval);
+}
 
 /**
  * 🛡️ Rate Limiter Factory

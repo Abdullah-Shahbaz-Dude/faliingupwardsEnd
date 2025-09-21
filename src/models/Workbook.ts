@@ -68,10 +68,10 @@ workbooksSchema.index({ templateId: 1, assignedTo: 1 });
 // 4. Status filtering for admin dashboard
 workbooksSchema.index({ status: 1 });
 
-// 5. User workbook queries with status: { assignedTo: X, status: Y }
+// 5. PERFORMANCE: Compound index for user workbook queries with status
 workbooksSchema.index({ assignedTo: 1, status: 1 });
 
-// 6. Template management: { isTemplate: true, status: X }
+// 6. PERFORMANCE: Admin dashboard filtering by template and status
 workbooksSchema.index({ isTemplate: 1, status: 1 });
 
 // 7. Recent activity sorting

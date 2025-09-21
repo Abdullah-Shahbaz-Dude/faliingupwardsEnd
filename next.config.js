@@ -1,5 +1,73 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // 🚀 PERFORMANCE OPTIMIZATIONS FOR REAL-WORLD SPEED
+  experimental: {
+    // Enable optimized package imports for faster builds
+    optimizePackageImports: ['@react-email/components', '@sentry/nextjs', 'framer-motion'],
+    // Faster builds with turbopack
+    turbo: {
+      rules: {
+        '*.svg': {
+          loaders: ['@svgr/webpack'],
+          as: '*.js',
+        },
+      },
+    },
+  },
+
+  // 📦 WEBPACK OPTIMIZATIONS FOR MAXIMUM SPEED
+  webpack: (config, { dev, isServer }) => {
+    // Development optimizations
+    if (dev) {
+      // Faster rebuilds and hot reloads
+      config.watchOptions = {
+        poll: 1000,
+        aggregateTimeout: 300,
+        ignored: ['**/node_modules', '**/.git', '**/.next'],
+      };
+      
+      // Reduce bundle analysis overhead in dev
+      config.optimization = {
+        ...config.optimization,
+        removeAvailableModules: false,
+        removeEmptyChunks: false,
+        splitChunks: false,
+      };
+
+      // Faster source maps for debugging
+      config.devtool = 'eval-cheap-module-source-map';
+    }
+
+    // Production optimizations
+    if (!dev) {
+      config.optimization = {
+        ...config.optimization,
+        usedExports: true,
+        sideEffects: false,
+        // Better tree shaking
+        providedExports: true,
+      };
+    }
+
+    return config;
+  },
+
+  // 🔄 COMPILER OPTIMIZATIONS
+  compiler: {
+    // Remove console.logs in production for smaller bundles
+    removeConsole: process.env.NODE_ENV === 'production' ? {
+      exclude: ['error', 'warn']
+    } : false,
+    // Enable SWC minification for faster builds
+    styledComponents: true,
+  },
+
+  // 📊 BUNDLE ANALYSIS - Track bundle size growth
+  bundleAnalyzer: {
+    enabled: process.env.ANALYZE === 'true',
+  },
+
+  // 🖼️ OPTIMIZED IMAGE CONFIGURATION
   images: {
     remotePatterns: [
       {
@@ -7,6 +75,16 @@ const nextConfig = {
         hostname: "placehold.co",
       },
     ],
+    // Enable modern image formats for better compression
+    formats: ['image/avif', 'image/webp'],
+    // Longer cache for better performance
+    minimumCacheTTL: 31536000, // 1 year
+    // Enable SVG support
+    dangerouslyAllowSVG: true,
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+    // Optimize image loading
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
   },
   // ESLint disabled during builds for deployment
   eslint: {

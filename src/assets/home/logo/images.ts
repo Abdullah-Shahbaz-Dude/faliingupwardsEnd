@@ -2,7 +2,7 @@
 
 import heroImg1 from "@/assets/home/hero/IMG_7551.webp";
 import heroImg2 from "@/assets/home/hero/IMG_7552.webp";
-import heroImg3 from "@/assets/home/hero/IMG_7553.webp";
+import heroImg3 from "@/assets/home/hero/IMG_7553.jpg";
 import heroImg4 from "@/assets/home/hero/IMG_7554.webp";
 
 import whyExistsSection from "@/assets/home/dji_0355.webp";

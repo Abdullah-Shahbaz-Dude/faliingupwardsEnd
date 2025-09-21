@@ -1,7 +1,10 @@
 const mongoose = require('mongoose');
 
-// Your MongoDB URI
-const MONGODB_URI = 'mongodb+srv://shahbazabdullah72:shahbazabdullah72@cluster0.w0oklxs.mongodb.net/WorkBooks?retryWrites=true&w=majority&appName=Cluster0';
+// 🔒 SECURITY: Use environment variable instead of hardcoded credentials
+const MONGODB_URI = process.env.MONGODB_URI || (() => {
+  console.error('❌ MONGODB_URI environment variable is required');
+  process.exit(1);
+})();
 
 // Define Workbook schema
 const workbookSchema = new mongoose.Schema({

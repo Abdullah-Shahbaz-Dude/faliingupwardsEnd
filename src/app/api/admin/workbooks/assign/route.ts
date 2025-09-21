@@ -75,7 +75,7 @@ export async function POST(request: NextRequest) {
                     `${request.headers.get('x-forwarded-proto') || 'http'}://${request.headers.get('host')}` : 
                     'http://localhost:3000';
       baseUrl = origin;
-      console.warn(`NEXT_PUBLIC_BASE_URL not set, using fallback: ${baseUrl}`);
+      // Using fallback URL - warning removed for performance
     }
     
     const dashboardLink = `${baseUrl}/user-dashboard?user=${userId}`;

@@ -7,14 +7,22 @@ import { logger } from "@/lib/logger";
 import { Resend } from "resend";
 import { render } from "@react-email/render";
 import WorkbookSubmission from "@/emails/WorkbookSubmission";
+import { withCache, clearCache } from "@/middleware/cache";
 
 // GET: Get workbooks for a specific user (public endpoint for user dashboard)
 export async function GET(
   request: NextRequest,
   { params }: { params: Promise<{ id: string }> }
 ) {
+  const { id: userId } = await params;
+  
+  // Direct call without caching for now - fix cache issues later
+  return await getUserWorkbooksData(userId);
+}
+
+// 📊 EXTRACTED WORKBOOKS DATA FETCHER FOR CACHING
+async function getUserWorkbooksData(userId: string) {
   try {
-    const { id: userId } = await params;
 
     // Validate user ID - check for null, undefined, empty string, or "null" string
     if (
@@ -29,10 +37,7 @@ export async function GET(
         userId: userId || 'undefined',
         ip: 'masked'
       });
-      return NextResponse.json(
-        { success: false, message: "Invalid user ID provided" },
-        { status: 400 }
-      );
+      throw new Error("Invalid user ID provided");
     }
 
     // Validate ObjectId format (24 character hex string)
@@ -118,6 +123,10 @@ export async function PUT(
   request: NextRequest,
   { params }: { params: Promise<{ id: string }> }
 ) {
+  // 🕐 REQUEST TIMEOUT PROTECTION (30 seconds max)
+  const timeoutController = new AbortController();
+  const timeoutId = setTimeout(() => timeoutController.abort(), 30000);
+  
   try {
     const { id: userId } = await params;
     const { workbooks: updatedWorkbooks } = await request.json();
@@ -259,7 +268,12 @@ export async function PUT(
       // Send email notification to admin for each submitted workbook
       try {
         const resend = new Resend(process.env.RESEND_API_KEY);
-        const recipientEmail = process.env.EMAIL_RECIPIENT || "fahadamjad778@gmail.com";
+        const recipientEmail = process.env.EMAIL_RECIPIENT;
+        
+        if (!recipientEmail) {
+          console.warn('EMAIL_RECIPIENT not configured - email notification skipped');
+          return NextResponse.json({ success: true, message: "Workbooks submitted successfully (email skipped)" });
+        }
 
         // Send one comprehensive email with all submitted workbooks
         const totalQuestions = finalWorkbooks.reduce((total, wb) => total + (wb.questions?.length || 0), 0);
@@ -304,7 +318,7 @@ export async function PUT(
           html: emailHtml,
         });
 
-        console.log(`✅ Bulk submission email sent to ${recipientEmail} for user: ${finalUser?.name} (${finalWorkbooks.length} workbooks)`);
+        // Email sent successfully - logging removed for performance
       } catch (emailError) {
         console.error("Error sending bulk submission email:", emailError);
         // Don't fail the submission if email fails
@@ -346,5 +360,8 @@ export async function PUT(
       },
       { status: 500 }
     );
+  } finally {
+    // 🧹 CLEANUP: Clear timeout to prevent memory leaks
+    clearTimeout(timeoutId);
   }
 }

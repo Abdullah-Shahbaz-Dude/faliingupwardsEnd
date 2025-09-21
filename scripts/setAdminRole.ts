@@ -1,7 +1,10 @@
 import mongoose, { Document } from "mongoose";
 
-const MONGO_URI =
-  "mongodb+srv://shahbazabdullah72:shahbazabdullah72@cluster0.w0oklxs.mongodb.net/WorkBooks";
+// 🔒 SECURITY: Use environment variable instead of hardcoded credentials
+const MONGO_URI = process.env.MONGODB_URI || (() => {
+  console.error('❌ MONGODB_URI environment variable is required');
+  process.exit(1);
+})();
 
 // Connect to MongoDB
 mongoose

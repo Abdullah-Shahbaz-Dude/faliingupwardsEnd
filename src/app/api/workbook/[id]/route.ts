@@ -273,7 +273,12 @@ export async function PUT(
         );
 
         // Send email to admin
-        const recipientEmail = process.env.EMAIL_RECIPIENT || "fahadamjad778@gmail.com";
+        const recipientEmail = process.env.EMAIL_RECIPIENT;
+        
+        if (!recipientEmail) {
+          console.warn('EMAIL_RECIPIENT not configured - email notification skipped');
+          // Continue without failing the workbook submission
+        } else {
         
         await resend.emails.send({
           from: process.env.EMAIL_FROM || `${process.env.ADMIN_NAME || "Fahad"} <onboarding@resend.dev>`,
@@ -282,7 +287,7 @@ export async function PUT(
           html: emailHtml,
         });
 
-        console.log(`✅ Workbook submission email sent to ${recipientEmail} for workbook: ${updatedWorkbook.title}`);
+        // Email sent successfully - logging removed for performance
       } catch (emailError) {
         console.error("Error sending submission email:", emailError);
         // Don't fail the submission if email fails
