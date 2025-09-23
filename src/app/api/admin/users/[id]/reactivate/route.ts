@@ -55,7 +55,7 @@ export async function POST(
       message: `User ${user.name} reactivated successfully. Dashboard access extended by ${extendDays} days.`,
       data: {
         user: updatedUser,
-        dashboardLink: `${process.env.NEXT_PUBLIC_API_URL}/user-dashboard?user=${userId}`,
+        dashboardLink: `${process.env.NEXT_PUBLIC_API_URL || "https://fallinupwards-backup-fullstack-mg7k.vercel.app"}/user-dashboard?user=${userId}`,
         expiresAt: updatedUser.linkExpiresAt,
       },
     });
