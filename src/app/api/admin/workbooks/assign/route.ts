@@ -4,6 +4,7 @@ import { verifyAdminAccess } from "@/lib/nextauth-helpers";
 import User from "@/models/User";
 import Workbook, { IQuestion } from "@/models/Workbook";
 import mongoose from "mongoose";
+// import { NEXT_URL } from "next/dist/client/components/app-router-headers";
 
 // POST: Assign workbook to user
 export async function POST(request: NextRequest) {
@@ -67,34 +68,37 @@ export async function POST(request: NextRequest) {
 
     // Generate consistent dashboard link
     let baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
-    
+
     // Fallback to request origin if NEXT_PUBLIC_BASE_URL is not set
     if (!baseUrl) {
-      const origin = request.headers.get('origin') || 
-                    request.headers.get('host') ? 
-                    `${request.headers.get('x-forwarded-proto') || 'http'}://${request.headers.get('host')}` : 
-                    'http://localhost:3000';
+      const origin =
+        request.headers.get("origin") || request.headers.get("host")
+          ? `${request.headers.get("x-forwarded-proto") || "http"}://${request.headers.get("host")}`
+          : process.env.NEXTAUTH_URL;
+
+      // 'http://localhost:3000';
       baseUrl = origin;
       // Using fallback URL - warning removed for performance
     }
-    
+
     const dashboardLink = `${baseUrl}/user-dashboard?user=${userId}`;
 
     // Use transaction to ensure atomic workbook assignment
     const session = await mongoose.startSession();
-    
+
     try {
       const result = await session.withTransaction(async () => {
         // Create a new workbook instance for the user
         const newWorkbook = new Workbook({
           title: templateWorkbook.title,
           description: templateWorkbook.description,
-          questions: templateWorkbook.questions?.map((q: IQuestion) => ({
-            question: q.question,
-            answer: ''
-          })) || [],
+          questions:
+            templateWorkbook.questions?.map((q: IQuestion) => ({
+              question: q.question,
+              answer: "",
+            })) || [],
           assignedTo: userId,
-          status: 'assigned',
+          status: "assigned",
           isTemplate: false,
           templateId: workbookId,
           shareableLink: dashboardLink,
@@ -103,14 +107,18 @@ export async function POST(request: NextRequest) {
         const savedWorkbook = await newWorkbook.save({ session });
 
         // Add workbook to user's workbooks array AND reactivate user
-        await User.findByIdAndUpdate(userId, {
-          $addToSet: { workbooks: savedWorkbook._id },
-          // REACTIVATE USER: Reset completion flags when new workbooks assigned
-          isCompleted: false,
-          dashboardExpired: false,
-          // Extend link expiration by 30 days from now
-          linkExpiresAt: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000)
-        }, { session });
+        await User.findByIdAndUpdate(
+          userId,
+          {
+            $addToSet: { workbooks: savedWorkbook._id },
+            // REACTIVATE USER: Reset completion flags when new workbooks assigned
+            isCompleted: false,
+            dashboardExpired: false,
+            // Extend link expiration by 30 days from now
+            linkExpiresAt: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000),
+          },
+          { session }
+        );
 
         return savedWorkbook;
       });
@@ -122,12 +130,14 @@ export async function POST(request: NextRequest) {
         message: "Workbook assigned successfully",
         data: {
           workbook: savedWorkbook,
-          shareableLink: dashboardLink
-        }
+          shareableLink: dashboardLink,
+        },
       });
-
     } catch (transactionError) {
-      console.error('Transaction failed during workbook assignment:', transactionError);
+      console.error(
+        "Transaction failed during workbook assignment:",
+        transactionError
+      );
       return NextResponse.json(
         { success: false, message: "Failed to assign workbook" },
         { status: 500 }
@@ -135,7 +145,6 @@ export async function POST(request: NextRequest) {
     } finally {
       await session.endSession();
     }
-
   } catch (error) {
     console.error("Error in workbook assignment:", error);
     return NextResponse.json(
@@ -171,7 +180,7 @@ export async function DELETE(request: NextRequest) {
     const deletedWorkbook = await Workbook.findOneAndDelete({
       _id: workbookId,
       assignedTo: userId,
-      isTemplate: false
+      isTemplate: false,
     });
 
     if (!deletedWorkbook) {
@@ -183,14 +192,13 @@ export async function DELETE(request: NextRequest) {
 
     // Remove workbook from user's workbooks array
     await User.findByIdAndUpdate(userId, {
-      $pull: { workbooks: workbookId }
+      $pull: { workbooks: workbookId },
     });
 
     return NextResponse.json({
       success: true,
-      message: "Workbook unassigned successfully"
+      message: "Workbook unassigned successfully",
     });
-
   } catch (error) {
     console.error("Error unassigning workbook:", error);
     return NextResponse.json(
