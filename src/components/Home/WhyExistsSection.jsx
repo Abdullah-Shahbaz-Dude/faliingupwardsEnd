@@ -20,8 +20,8 @@ const WhyExistsSection = () => {
               <span>Falling Upwards</span> exists to help individuals and
               organisations define a vision and direction shaped by who they
               truly are and what they value. The only certainty in life is that
-              we move forwards. If we're lucky, we have around{" "}
-              <span>3 billion seconds</span> on this earth to make that journey
+              we move forwards. If we're lucky, we have around
+              <span> 3 billion seconds</span> on this earth to make that journey
               count.
             </p>
           </div>
@@ -33,14 +33,16 @@ const WhyExistsSection = () => {
             className="rounded-xl overflow-hidden shadow-lg"
             style={{ height: "300px" }}
           >
-            {" "}
             {/* Adjust height as needed */}
             <Image
               src={whyExistsImage}
               alt="Falling Upwards"
               width={1920} // Larger width for full-width display
-              height={200} // Matches the container height
+              height={300} // Matches the container height
               className="object-cover w-full h-full"
+              priority={false}
+              quality={85}
+              sizes="(max-width: 768px) 100vw, 1920px"
             />
           </div>
         </div>

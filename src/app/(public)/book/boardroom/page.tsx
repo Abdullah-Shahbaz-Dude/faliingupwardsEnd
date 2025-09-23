@@ -6,6 +6,8 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import Link from "next/link";
 import { HeroSection } from "@/components/common/HeroSection";
+import { homepageImages } from "@/lib/frontend/images";
+
 import {
   FiArrowLeft,
   FiCheck,
@@ -179,7 +181,8 @@ function BookPageContent() {
     <div className="min-h-screen pb-16">
       <HeroSection
         title="Boardroom Advisory"
-        backgroundImage="/images/services/executive-mentoring.webp"
+        // backgroundImage="/images/services/executive-mentoring.webp"
+        backgroundImage={homepageImages.services.executiveMentoring}
       />
 
       <div className="container-custom mx-auto">

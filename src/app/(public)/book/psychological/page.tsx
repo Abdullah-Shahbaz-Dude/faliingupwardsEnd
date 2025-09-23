@@ -6,6 +6,8 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import Link from "next/link";
 import { HeroSection } from "@/components/common/HeroSection";
+import { psychologicalImgs } from "@/lib/frontend/images";
+
 import {
   FiArrowLeft,
   FiCalendar,
@@ -306,15 +308,11 @@ function BookPageContent() {
     };
   }, []);
 
+  const { hero } = psychologicalImgs;
+
   return (
     <div className="min-h-screen pb-16">
-      <HeroSection
-        title="Psychological Therapy "
-        subtitle="Our psychological therapy services provide a safe, confidential space for individuals to explore challenges and develop strategies for positive change."
-        backgroundImage="/images/backgrounds/Psychological-Therapy-Page.JPG"
-        height="medium"
-        textPosition="left"
-      />
+      <HeroSection title="Psychological Therapy " backgroundImage={hero} />
       <div className="container-custom mx-auto">
         <div className="mb-16 mt-16 ml-10">
           <Link

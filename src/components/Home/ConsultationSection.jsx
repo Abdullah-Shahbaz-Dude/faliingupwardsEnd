@@ -14,7 +14,9 @@ const ConsultationSection = () => {
           alt="Consultation Background"
           fill
           className="object-cover brightness-[0.3]"
-          priority
+          priority={false}
+          quality={85}
+          sizes="100vw"
         />
       </div>
 

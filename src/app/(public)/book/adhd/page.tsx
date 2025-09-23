@@ -5,7 +5,9 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import Link from "next/link";
+import { homepageImages, psychologicalImgs } from "@/lib/frontend/images";
 import { HeroSection } from "@/components/common/HeroSection";
+
 import {
   FiArrowLeft,
   FiCalendar,
@@ -205,12 +207,11 @@ function BookPageContent() {
     };
   }, []);
 
+  const { hero } = psychologicalImgs;
+
   return (
     <div className="min-h-screen  pb-16">
-      <HeroSection
-        title="ADHD Coaching"
-        backgroundImage="/images/services/IMG_7552.webp"
-      />
+      <HeroSection title="ADHD Coaching" backgroundImage={hero} />
 
       <div className="container-custom mx-auto">
         <div className="mb-16 mt-16 ml-10">

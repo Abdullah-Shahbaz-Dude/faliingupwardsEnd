@@ -1,3 +1,5 @@
+"use client";
+
 import LogoSlider from "./LogoSlider";
 
 const PartnersSection = () => {

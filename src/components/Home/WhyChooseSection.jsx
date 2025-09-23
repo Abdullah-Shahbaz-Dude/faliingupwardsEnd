@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import AccordionItem from "./AccordionItem";
 import { homepageImages } from "@/lib/frontend/images";

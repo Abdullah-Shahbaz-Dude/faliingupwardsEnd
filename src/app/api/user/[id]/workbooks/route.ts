@@ -314,7 +314,7 @@ export async function PUT(
         await resend.emails.send({
           from: process.env.EMAIL_FROM || `${process.env.ADMIN_NAME || "Fahad"} <onboarding@resend.dev>`,
           to: [recipientEmail],
-          subject: `🎉 All Workbooks Submitted: ${finalUser?.name} - ${finalWorkbooks.length} workbook${finalWorkbooks.length > 1 ? 's' : ''}`,
+          subject: ` All Workbooks Submitted: ${finalUser?.name} - ${finalWorkbooks.length} workbook${finalWorkbooks.length > 1 ? 's' : ''}`,
           html: emailHtml,
         });
 

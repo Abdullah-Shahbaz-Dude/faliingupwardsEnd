@@ -17,6 +17,7 @@ import {
   FiPhone,
   FiUser,
 } from "react-icons/fi";
+import { homepageImages } from "@/lib/frontend/images";
 
 const bookingSchema = z.object({
   // Agreement
@@ -285,9 +286,7 @@ function BookPageContent() {
     <div className="min-h-screen pb-16">
       <HeroSection
         title="Different Thinking For Different Thinkers"
-        subtitle="Innovation doesn't come from consensus; it comes from difference"
-        backgroundImage="/images/services/IMG_7552.webp"
-        textPosition="left"
+        backgroundImage={homepageImages.hero.heroImg2}
       />
 
       <div className="container-custom mx-auto">

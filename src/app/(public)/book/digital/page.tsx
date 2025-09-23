@@ -3,6 +3,7 @@
 import { useState, useEffect, Suspense } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
+import { digitalEvolutionImgs } from "@/lib/frontend/images";
 import { zodResolver } from "@hookform/resolvers/zod";
 import {
   FiArrowLeft,
@@ -56,6 +57,16 @@ const bookingSchema = z.object({
 
   // Hidden fields
   __displayFormat: z.string().optional(),
+  organisationSize: z.string().optional(),
+  sector: z.string().optional(),
+  otherSector: z.string().optional(),
+  challenge: z.string().optional(),
+  digitalMaturity: z.string().optional(),
+  currentSystems: z.string().optional(),
+  supportType: z.array(z.string()).optional(),
+  otherSupportType: z.string().optional(),
+  keyPeople: z.string().optional(),
+  successOutcome: z.string().optional(),
 });
 
 type BookingFormValues = z.infer<typeof bookingSchema>;
@@ -233,15 +244,14 @@ function BookPageContent() {
     };
   }, []);
 
+  const { hero1 } = digitalEvolutionImgs;
+
   return (
     <div className="min-h-screen  pb-16">
       {/* Hero Section */}
       <HeroSection
         title="Digital Evolution & AI Adoption"
-        subtitle="We provide specialized mentoring and support for executives and board members, helping them navigate complex leadership challenges."
-        backgroundImage="/images/backgrounds/Digital-Evolution -Ai-Adoption.JPG"
-        height="medium"
-        textPosition="left"
+        backgroundImage={hero1}
       />
 
       <div className="container-custom mx-auto">

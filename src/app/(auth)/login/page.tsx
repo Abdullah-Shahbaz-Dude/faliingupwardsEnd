@@ -153,15 +153,6 @@ function LoginContent() {
               </div>
             </div>
 
-            <div className="text-sm text-right">
-              <Link
-                href="/admin/forgot-password"
-                className="text-[#0B4073] hover:underline"
-              >
-                Forgot your password?
-              </Link>
-            </div>
-
             <div>
               <button
                 type="submit"

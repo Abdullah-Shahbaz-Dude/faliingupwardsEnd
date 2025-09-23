@@ -4,18 +4,19 @@ import React from "react";
 import Link from "next/link";
 import { HeroSection } from "@/components/common/HeroSection";
 import { FiArrowRight } from "react-icons/fi";
+import image from "@/assets/shutterstock_2455025455.jpg";
 
 export default function PrivacyPolicyPage() {
+  const today = new Date();
+  const formattedDate = today.toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
   return (
     <div className="font-roboto">
       {/* Hero Section */}
-      <HeroSection
-        title="Privacy Policy"
-        subtitle="How we collect, use, and protect your personal information"
-        backgroundImage="/images/backgrounds/consultation-bg.jpg"
-        height="small"
-        textPosition="center"
-      />
+      <HeroSection title="Privacy Policy" backgroundImage={image} />
 
       <div className="container-custom mx-auto py-16">
         <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-md p-8 md:p-10">
@@ -205,21 +206,21 @@ export default function PrivacyPolicyPage() {
               please contact us at:
             </p>
             <p className="mb-8">
-              <strong>Email:</strong> privacy@fallingupwards.com
+              <strong>Email:</strong> alex@fallingupwards.co.uk
               <br />
               <strong>Address:</strong> Falling Upwards, 123 Main Street,
               London, UK
             </p>
 
             <div className="text-sm text-gray-500 mt-10 pt-8 border-t border-gray-200">
-              <p>Last Updated: June 10, 2023</p>
+              <p>{formattedDate}</p>
             </div>
           </div>
         </div>
 
         <div className="mt-10 text-center">
           <Link
-            href="/terms-of-service"
+            href="/policies/terms-of-service"
             className="inline-flex items-center text-[#0B4073] font-medium hover:underline"
           >
             View our Terms of Service

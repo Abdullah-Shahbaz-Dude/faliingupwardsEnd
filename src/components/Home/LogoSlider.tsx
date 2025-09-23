@@ -1,3 +1,5 @@
+"use client";
+
 import { useState, useEffect } from "react";
 import Image, { StaticImageData } from "next/image";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";

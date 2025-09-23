@@ -63,9 +63,9 @@ const nextConfig = {
   },
 
   // 📊 BUNDLE ANALYSIS - Track bundle size growth
-  bundleAnalyzer: {
-    enabled: process.env.ANALYZE === 'true',
-  },
+  // bundleAnalyzer: {
+  //   enabled: process.env.ANALYZE === 'true',
+  // },
 
   // 🖼️ OPTIMIZED IMAGE CONFIGURATION
   images: {

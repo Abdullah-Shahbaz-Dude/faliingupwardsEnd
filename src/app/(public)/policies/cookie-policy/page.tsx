@@ -4,18 +4,20 @@ import React from "react";
 import Link from "next/link";
 import { HeroSection } from "@/components/common/HeroSection";
 import { FiArrowRight } from "react-icons/fi";
+import image from "@/assets/shutterstock_2455025455.jpg";
 
 export default function CookiePolicyPage() {
+  const today = new Date();
+  const formattedDate = today.toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+
   return (
     <div className="font-roboto">
       {/* Hero Section */}
-      <HeroSection
-        title="Cookie Policy"
-        subtitle="How we use cookies and other tracking technologies on our website"
-        backgroundImage="/images/backgrounds/Digital-Evolution -Ai-Adoption.JPG"
-        height="small"
-        textPosition="center"
-      />
+      <HeroSection title="Cookie Policy" backgroundImage={image} />
 
       <div className="container-custom mx-auto py-16">
         <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-md p-8 md:p-10">
@@ -161,21 +163,21 @@ export default function CookiePolicyPage() {
               contact us at:
             </p>
             <p className="mb-8">
-              <strong>Email:</strong> privacy@fallingupwards.com
+              <strong>Email:</strong> alex@fallingupwards.co.uk
               <br />
               <strong>Address:</strong> Falling Upwards, 123 Main Street,
               London, UK
             </p>
 
             <div className="text-sm text-gray-500 mt-10 pt-8 border-t border-gray-200">
-              <p>Last Updated: June 10, 2023</p>
+              <p>{formattedDate}</p>
             </div>
           </div>
         </div>
 
         <div className="mt-10 text-center">
           <Link
-            href="/privacy-policy"
+            href="/policies/privacy-policy"
             className="inline-flex items-center text-[#0B4073] font-medium hover:underline"
           >
             View our Privacy Policy

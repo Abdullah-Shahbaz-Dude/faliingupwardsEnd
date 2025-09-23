@@ -279,17 +279,22 @@ export async function PUT(
           console.warn('EMAIL_RECIPIENT not configured - email notification skipped');
           // Continue without failing the workbook submission
         } else {
-        
-        await resend.emails.send({
-          from: process.env.EMAIL_FROM || `${process.env.ADMIN_NAME || "Fahad"} <onboarding@resend.dev>`,
-          to: [recipientEmail],
-          subject: `📋 Workbook Submitted: ${updatedWorkbook.title} - ${user.name}`,
-          html: emailHtml,
-        });
+          try {
+            await resend.emails.send({
+              from: process.env.EMAIL_FROM || `${process.env.ADMIN_NAME || "Fahad"} <onboarding@resend.dev>`,
+              to: [recipientEmail],
+              subject: `📋 Workbook Submitted: ${updatedWorkbook.title} - ${user.name}`,
+              html: emailHtml,
+            });
 
-        // Email sent successfully - logging removed for performance
+            // Email sent successfully - logging removed for performance
+          } catch (emailError) {
+            console.error("Error sending submission email:", emailError);
+            // Don't fail the submission if email fails
+          }
+        }
       } catch (emailError) {
-        console.error("Error sending submission email:", emailError);
+        console.error("Error sending email:", emailError);
         // Don't fail the submission if email fails
       }
     }

@@ -70,3 +70,5 @@ You've done EXCELLENT work! These final optimizations will transform your websit
 **After these fixes, your website will be faster than 95% of websites on the internet!**
 
 The hard optimization work is done - these are just file compression tasks that will take 30 minutes and make your website incredibly fast.
+
+
