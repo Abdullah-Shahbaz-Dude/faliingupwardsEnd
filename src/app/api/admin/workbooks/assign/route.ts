@@ -67,7 +67,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Generate consistent dashboard link
-    let baseUrl = process.env.NEXTAUTH_URL;
+    let baseUrl = process.env.NEXT_PUBLIC_API_URL;
     // let baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
     // Fallback to request origin if NEXT_PUBLIC_BASE_URL is not set
@@ -75,7 +75,7 @@ export async function POST(request: NextRequest) {
       const origin =
         request.headers.get("origin") || request.headers.get("host")
           ? `${request.headers.get("x-forwarded-proto") || "http"}://${request.headers.get("host")}`
-          : process.env.NEXTAUTH_URL;
+          : process.env.NEXT_PUBLIC_API_URL;
 
       // 'http://localhost:3000';
       baseUrl = origin;

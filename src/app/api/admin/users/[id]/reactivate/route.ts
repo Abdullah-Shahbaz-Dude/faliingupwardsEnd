@@ -45,7 +45,7 @@ export async function POST(
         isCompleted: false,
         dashboardExpired: false,
         linkExpiresAt: new Date(Date.now() + extendDays * 24 * 60 * 60 * 1000),
-        updatedAt: new Date()
+        updatedAt: new Date(),
       },
       { new: true }
     );
@@ -55,11 +55,10 @@ export async function POST(
       message: `User ${user.name} reactivated successfully. Dashboard access extended by ${extendDays} days.`,
       data: {
         user: updatedUser,
-        dashboardLink: `${process.env.NEXTAUTH_URL || 'http://localhost:3000'}/user-dashboard?user=${userId}`,
-        expiresAt: updatedUser.linkExpiresAt
-      }
+        dashboardLink: `${process.env.NEXT_PUBLIC_API_URL}/user-dashboard?user=${userId}`,
+        expiresAt: updatedUser.linkExpiresAt,
+      },
     });
-
   } catch (error) {
     console.error("Error reactivating user:", error);
     return NextResponse.json(
