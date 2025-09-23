@@ -13,7 +13,7 @@ interface LogContext {
 
 interface LogEntry {
   timestamp: string;
-  level: 'info' | 'warn' | 'error' | 'debug';
+  level: "info" | "warn" | "error" | "debug";
   message: string;
   context?: LogContext;
   error?: {
@@ -29,12 +29,12 @@ class Logger {
   private isDevelopment: boolean;
 
   constructor() {
-    this.environment = process.env.NODE_ENV || 'development';
-    this.isDevelopment = this.environment === 'development';
+    this.environment = process.env.NODE_ENV || "development";
+    this.isDevelopment = this.environment === "development";
   }
 
   private createLogEntry(
-    level: LogEntry['level'],
+    level: LogEntry["level"],
     message: string,
     context?: LogContext,
     error?: Error
@@ -66,22 +66,24 @@ class Logger {
       // Development: Pretty print with colors
       const timestamp = new Date(entry.timestamp).toLocaleTimeString();
       const levelColors = {
-        info: '\x1b[36m',    // Cyan
-        warn: '\x1b[33m',    // Yellow
-        error: '\x1b[31m',   // Red
-        debug: '\x1b[90m',   // Gray
+        info: "\x1b[36m", // Cyan
+        warn: "\x1b[33m", // Yellow
+        error: "\x1b[31m", // Red
+        debug: "\x1b[90m", // Gray
       };
-      const reset = '\x1b[0m';
+      const reset = "\x1b[0m";
       const color = levelColors[entry.level];
-      
-      console.log(`${color}[${timestamp}] ${entry.level.toUpperCase()}${reset}: ${entry.message}`);
-      
+
+      console.log(
+        `${color}[${timestamp}] ${entry.level.toUpperCase()}${reset}: ${entry.message}`
+      );
+
       if (entry.context) {
-        console.log('  Context:', entry.context);
+        console.log("  Context:", entry.context);
       }
-      
+
       if (entry.error) {
-        console.error('  Error:', entry.error);
+        console.error("  Error:", entry.error);
       }
     } else {
       // Production: Structured JSON for log aggregation
@@ -90,20 +92,20 @@ class Logger {
   }
 
   info(message: string, context?: LogContext): void {
-    this.output(this.createLogEntry('info', message, context));
+    this.output(this.createLogEntry("info", message, context));
   }
 
   warn(message: string, context?: LogContext): void {
-    this.output(this.createLogEntry('warn', message, context));
+    this.output(this.createLogEntry("warn", message, context));
   }
 
   error(message: string, context?: LogContext, error?: Error): void {
-    this.output(this.createLogEntry('error', message, context, error));
+    this.output(this.createLogEntry("error", message, context, error));
   }
 
   debug(message: string, context?: LogContext): void {
     if (this.isDevelopment) {
-      this.output(this.createLogEntry('debug', message, context));
+      this.output(this.createLogEntry("debug", message, context));
     }
   }
 
@@ -116,15 +118,29 @@ class Logger {
     });
   }
 
-  apiError(method: string, endpoint: string, error: Error, context?: LogContext): void {
-    this.error(`API ${method} ${endpoint} failed`, {
-      method,
-      endpoint,
-      ...context,
-    }, error);
+  apiError(
+    method: string,
+    endpoint: string,
+    error: Error,
+    context?: LogContext
+  ): void {
+    this.error(
+      `API ${method} ${endpoint} failed`,
+      {
+        method,
+        endpoint,
+        ...context,
+      },
+      error
+    );
   }
 
-  apiSuccess(method: string, endpoint: string, duration?: number, context?: LogContext): void {
+  apiSuccess(
+    method: string,
+    endpoint: string,
+    duration?: number,
+    context?: LogContext
+  ): void {
     this.info(`API ${method} ${endpoint} success`, {
       method,
       endpoint,
@@ -143,32 +159,45 @@ class Logger {
   }
 
   dbError(operation: string, collection: string, error: Error): void {
-    this.error(`DB ${operation} on ${collection} failed`, {
-      operation,
-      collection,
-    }, error);
+    this.error(
+      `DB ${operation} on ${collection} failed`,
+      {
+        operation,
+        collection,
+      },
+      error
+    );
   }
 
   // Email logging helpers
-  emailSent(to: string, subject: string, provider: string = 'resend'): void {
-    this.info('Email sent successfully', {
+  emailSent(to: string, subject: string, provider: string = "resend"): void {
+    this.info("Email sent successfully", {
       to: this.maskEmail(to),
       subject,
       provider,
     });
   }
 
-  emailError(to: string, subject: string, error: Error, provider: string = 'resend'): void {
-    this.error('Email sending failed', {
-      to: this.maskEmail(to),
-      subject,
-      provider,
-    }, error);
+  emailError(
+    to: string,
+    subject: string,
+    error: Error,
+    provider: string = "resend"
+  ): void {
+    this.error(
+      "Email sending failed",
+      {
+        to: this.maskEmail(to),
+        subject,
+        provider,
+      },
+      error
+    );
   }
 
   // Rate limiting logging
   rateLimitHit(identifier: string, endpoint: string, limit: number): void {
-    this.warn('Rate limit exceeded', {
+    this.warn("Rate limit exceeded", {
       identifier: this.maskIdentifier(identifier),
       endpoint,
       limit,
@@ -177,14 +206,14 @@ class Logger {
 
   // Authentication logging
   authSuccess(userId: string, method: string): void {
-    this.info('Authentication successful', {
+    this.info("Authentication successful", {
       userId,
       method,
     });
   }
 
   authFailure(identifier: string, method: string, reason: string): void {
-    this.warn('Authentication failed', {
+    this.warn("Authentication failed", {
       identifier: this.maskIdentifier(identifier),
       method,
       reason,
@@ -192,7 +221,11 @@ class Logger {
   }
 
   // Security logging
-  securityEvent(event: string, severity: 'low' | 'medium' | 'high', context?: LogContext): void {
+  securityEvent(
+    event: string,
+    severity: "low" | "medium" | "high",
+    context?: LogContext
+  ): void {
     this.warn(`Security event: ${event}`, {
       severity,
       ...context,
@@ -201,13 +234,13 @@ class Logger {
 
   // Utility methods for data masking
   private maskEmail(email: string): string {
-    const [local, domain] = email.split('@');
+    const [local, domain] = email.split("@");
     if (local.length <= 2) return `${local}***@${domain}`;
     return `${local.substring(0, 2)}***@${domain}`;
   }
 
   private maskIdentifier(identifier: string): string {
-    if (identifier.length <= 4) return '***';
+    if (identifier.length <= 4) return "***";
     return `${identifier.substring(0, 2)}***${identifier.substring(identifier.length - 2)}`;
   }
 }
@@ -224,11 +257,12 @@ export const getRequestContext = (req: Request): LogContext => {
   return {
     method: req.method,
     endpoint: url.pathname,
-    userAgent: req.headers.get('user-agent') || 'unknown',
-    ip: req.headers.get('x-forwarded-for') || 
-        req.headers.get('x-real-ip') || 
-        req.headers.get('cf-connecting-ip') || 
-        'unknown',
+    userAgent: req.headers.get("user-agent") || "unknown",
+    ip:
+      req.headers.get("x-forwarded-for") ||
+      req.headers.get("x-real-ip") ||
+      req.headers.get("cf-connecting-ip") ||
+      "unknown",
   };
 };
 
