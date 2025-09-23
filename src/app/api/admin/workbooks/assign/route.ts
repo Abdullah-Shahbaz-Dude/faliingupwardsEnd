@@ -67,7 +67,8 @@ export async function POST(request: NextRequest) {
     }
 
     // Generate consistent dashboard link
-    let baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+    let baseUrl = process.env.NEXTAUTH_URL;
+    // let baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
     // Fallback to request origin if NEXT_PUBLIC_BASE_URL is not set
     if (!baseUrl) {
