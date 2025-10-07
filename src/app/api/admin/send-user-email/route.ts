@@ -1,11 +1,14 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
+import { render } from "@react-email/render";
 // UPDATED: Use NextAuth helper instead of commented-out custom auth
 // import { verifyAdminAccess } from "@/lib/auth";
 import { verifyAdminAccess } from "@/lib/nextauth-helpers";
 import UserDashboardAccess from "@/emails/UserDashboardAccess";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const resend = new Resend(
+  process.env.RESEND_API_KEY || "dummy_key_for_development"
+);
 
 export async function POST(request: NextRequest) {
   try {
@@ -42,35 +45,23 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    // Render email template
+    const emailHtml = await render(
+      UserDashboardAccess({
+        userName,
+        userEmail,
+        dashboardLink,
+        workbookTitles,
+        adminName: adminName || process.env.ADMIN_NAME || "Alex",
+      })
+    );
+
     // Send email using Resend
     const emailResult = await resend.emails.send({
-      from: process.env.EMAIL_FROM || `${process.env.ADMIN_NAME || "Fahad"} <onboarding@resend.dev>`,
-      to: ["fahadamjad778@gmail.com"], // Development: Send to verified email
+      from: process.env.EMAIL_FROM || "Falling Upward <onboarding@resend.dev>",
+      to: [userEmail], // Send to actual user email
       subject: `Your Falling Upward Dashboard is Ready - ${workbookTitles.length} Workbook${workbookTitles.length !== 1 ? "s" : ""} Assigned`,
-      html: `
-        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-          <h1 style="color: #0B4073;">Dashboard Access from ${process.env.ADMIN_NAME || "Fahad"}</h1>
-          <p>Hello <strong>${userName}</strong>,</p>
-          <p>I've assigned ${workbookTitles.length} workbook${workbookTitles.length !== 1 ? 's' : ''} to you. Please access your dashboard using the link below:</p>
-          
-          <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 20px 0;">
-            <h3>Your Assigned Workbooks:</h3>
-            <ul>
-              ${workbookTitles.map((title: string) => `<li>${title}</li>`).join('')}
-            </ul>
-          </div>
-          
-          <div style="text-align: center; margin: 30px 0;">
-            <a href="${dashboardLink}" style="background: #0B4073; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; display: inline-block;">
-              Access Your Dashboard
-            </a>
-          </div>
-          
-          <hr style="margin: 30px 0; border: none; border-top: 1px solid #eee;">
-          <p style="color: #666; font-size: 14px;"><strong>Development Note:</strong> This email was intended for: ${userEmail}</p>
-          <p>Best regards,<br><strong>${process.env.ADMIN_NAME || "Fahad"}</strong><br>Falling Upward</p>
-        </div>
-      `,
+      html: emailHtml,
     });
 
     if (emailResult.error) {

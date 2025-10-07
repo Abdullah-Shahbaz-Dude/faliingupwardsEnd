@@ -127,7 +127,6 @@ export function Navbar() {
                   ref={offersRef}
                   onMouseEnter={() => setIsOffersOpen(true)}
                   onMouseLeave={() => setIsOffersOpen(false)}
-                  //
                   role="button"
                 >
                   <div

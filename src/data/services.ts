@@ -73,24 +73,24 @@ export const servicesSectionData = [
     href: "/our-services/digital-evolution",
     image: digitalEvolution,
     alt: "Digital evolution and AI adoption",
-    title: "Digital Evolution & AI Adoption"
+    title: "Digital Evolution & AI Adoption",
   },
   {
     href: "/our-services/psychological-therapy",
     image: psychologicalTherapy,
     alt: "Executive Mentoring & Boardroom Support",
-    title: "Psychological Therapy & ADHD Coaching"
+    title: "Psychological Therapy & ADHD Coaching",
   },
   {
     href: "/our-services/executive-mentoring",
     image: executiveMentoring,
     alt: "Executive Mentoring & Boardroom Support",
-    title: "Executive Mentoring & Board Room Support"
+    title: "Executive Mentoring & Board Room Support",
   },
   {
     href: "/our-services/thinking-different",
     image: adhdCoaching,
     alt: "neurodiversity",
-    title: "Different Thinking For Different Thinkers "
-  }
+    title: "Different Thinking For Different Thinkers ",
+  },
 ];

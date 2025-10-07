@@ -33,10 +33,6 @@ export default function SubmissionComplete() {
               Thank you for completing your workbooks. Your responses have been successfully submitted and are now under review.
             </p>
           </motion.div>
-
-         
-
-        
           {/* Final Message */}
           <motion.div
             className="bg-white rounded-2xl p-8 shadow-sm border border-slate-300 text-center"

@@ -1,4 +1,3 @@
-
 import Link from "next/link";
 import { memo } from "react";
 import OptimizedImage from "@/components/ui/OptimizedImage";
@@ -20,13 +19,11 @@ const ServicesSection = memo(() => {
               className="flex flex-col items-center bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-xl"
             >
               <Link href={service.href} className="group w-full">
-                <div className="w-full aspect-square relative overflow-hidden">
+                <div className="w-full aspect-square relative overflow-hidden bg-gray-50">
                   <OptimizedImage
                     src={service.image}
                     alt={service.alt}
-                    width={300}
-                    height={300}
-                    className={`w-full h-full transition-transform duration-500 ${
+                    className={`w-full h-full object-cover object-center transition-transform duration-500 ${
                       index === 2
                         ? "scale-[2] group-hover:scale-[2.2]"
                         : "group-hover:scale-110"

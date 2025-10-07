@@ -5,11 +5,6 @@ import { FiArrowRight } from "react-icons/fi";
 
 import image from "@/assets/shutterstock_2455025455.jpg";
 
-// export async function getStaticProps() {
-//   return {
-//     props: {}, // No dynamic data needed for static content
-//   };
-// }
 
 export default function TermsOfServicePage() {
   const today = new Date();

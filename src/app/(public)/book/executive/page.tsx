@@ -17,6 +17,7 @@ import {
   FiPhone,
   FiUser,
 } from "react-icons/fi";
+import { homepageImages } from "@/lib/frontend/images";
 
 const bookingSchema = z.object({
   // Agreement and Consent
@@ -182,10 +183,7 @@ function BookPageContent() {
       {/* Hero Section */}
       <HeroSection
         title="Executive Mentoring"
-        subtitle="Specialized mentoring for executives to navigate complex leadership challenges"
-        backgroundImage="/images/services/executive-mentoring.webp"
-        height="medium"
-        textPosition="left"
+        backgroundImage={homepageImages.services.executiveMentoring}
       />
       <div className="container-custom mx-auto">
         <div className="mb-16 mt-16 ml-10">
